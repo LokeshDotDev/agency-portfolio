@@ -1,13 +1,11 @@
 "use client";
 import { TextAnimate } from "@/components/magicui/text-animate";
-import { motion } from "motion/react";
 import {
   LucideShoppingCart,
   LucideBarChart3,
   LucideBrush,
   LucideCloudUpload,
 } from "lucide-react";
-import { AuroraText } from "@/components/magicui/aurora-text";
 import { GridPattern } from "@/components/magicui/grid-pattern";
 
 const caseStudies = [
@@ -90,7 +88,7 @@ const CaseStudiesSection = () => {
       </div>
       {/* Premium 2-column grid layout */}
       <div className="relative z-10 w-full max-w-5xl px-4 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-        {caseStudies.map((cs, idx) => (
+        {caseStudies.map((cs) => (
           <div
             key={cs.title}
             className="group relative bg-white/70 dark:bg-neutral-900/70 border border-neutral-200 dark:border-neutral-800 rounded-3xl shadow-2xl p-8 flex flex-col gap-4 backdrop-blur-lg overflow-hidden hover:scale-[1.025] transition-transform duration-300"

@@ -3,6 +3,7 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 import { motion } from "motion/react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const ContactSection = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -41,11 +42,14 @@ const ContactSection = () => {
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
         {/* Spinning globe accent */}
-        <img
+        <Image
           src="/globe.svg"
           alt="Contact background"
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] opacity-30 dark:opacity-10 blur-[2px] select-none pointer-events-none animate-spin-slow"
           draggable="false"
+          width={420}
+          height={420}
+          priority
         />
       </div>
       <div className="mb-12 relative z-10">
@@ -83,7 +87,7 @@ const ContactSection = () => {
             <div className="text-center py-12">
               <div className="text-4xl mb-2 animate-bounce">🎉</div>
               <div className="text-lg font-semibold text-blue-600 dark:text-blue-400">
-                Thank you! We'll be in touch soon.
+                Thank you! We will be in touch soon.
               </div>
             </div>
           ) : (
